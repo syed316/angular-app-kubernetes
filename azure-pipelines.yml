@@ -16,3 +16,7 @@ steps:
     repository: 'angular'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+- task: CopyFiles@2
+  inputs:
+    Contents: 'deployment.azure.yaml'
+    TargetFolder: '$(build.artifactstagingdirectory)'
